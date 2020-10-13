@@ -24,7 +24,7 @@ const Service = () => {
            <div className="text-center my-5">
               <h1>Provide Awesome <span style={{color:'#7AB259'}}>Service</span></h1>
            </div>
-           <div className="d-flex w-100  m-auto">
+           <div className="d-flex w-100  m-auto row">
              {
                 servicesData.map(service => <ServiceDetail service={service} key={Service.name}></ServiceDetail>)
             }

@@ -3,7 +3,7 @@ import React from 'react';
 const ServiceDetail = ({ service }) => {
     return (
 
-        <div class="card border-white justify-content-center "> 
+        <div class="card border-white justify-content-center col-md-4"> 
              
             <div style={{margin: 'auto'}}>
                 <img style={{width: '8rem'}} class="card-img-top" src={service.img} alt="Card image cap"/>
