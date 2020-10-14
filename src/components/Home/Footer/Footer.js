@@ -10,13 +10,13 @@ const Footer = () => {
             <div className="col-md-6 mb-5 col-sm-12">
                 <form>
                     <div class="form-group">
-                        <input type="email" class="form-control footer-input" placeholder="Your Email Address"/>
+                        <input type="email" class="form-control" placeholder="Your Email Address"/>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control footer-input" placeholder="Your Name/Companie's Name"/>
+                        <input type="text" class="form-control" placeholder="Your Name/Companie's Name"/>
                     </div>
                     <div class="form-group">
-                        <textarea style={{width: "550px"}} placeholder="Your Message"  class="form-control" rows="8"></textarea>
+                        <textarea placeholder="Your Message"  class="form-control" rows="8"></textarea>
                     </div>
                     <button className="btn btn-brand text-white">Send</button>
                 </form>

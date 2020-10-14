@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceDetail from './ServiceDetail/ServiceDetail';
-
+import './Service.css'
 const servicesData = [
     {
         title: 'Web and Mobile Design',
@@ -20,11 +20,11 @@ const servicesData = [
 ]
 const Service = () => {
     return (
-        <div >
+        <div  className="service">
            <div className="text-center my-5">
               <h1>Provide Awesome <span style={{color:'#7AB259'}}>Service</span></h1>
            </div>
-           <div className="d-flex w-100  m-auto row">
+           <div className="d-flex w-100 m-auto row">
              {
                 servicesData.map(service => <ServiceDetail service={service} key={service.title}></ServiceDetail>)
             }

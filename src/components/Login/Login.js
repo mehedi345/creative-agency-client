@@ -61,7 +61,7 @@ const Login = () => {
             <img height="40px" src={Google} alt="" />
             <span>Continue with Google</span>
           </Button>
-          <p>
+          <p className="login-para">
             Don't have an account? <a href="#">Create an account</a>{" "}
           </p>
         </div>

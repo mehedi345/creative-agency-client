@@ -5,7 +5,10 @@
     border: 1px solid black;
     margin-top: 80px;
 }
-.login-area h2, p{
+.login-area  h2{
+    text-align: center;
+}
+.login-para{
     text-align: center;
 }
 .img{
