@@ -10,7 +10,7 @@ const ServiceDetail = ({ service }) => {
                 </div>
 
                 <div class="card-body text-center">
-                    <h5 class="card-title font-weight-bold">{service.name}</h5>
+                    <h5 class="card-title font-weight-bold">{service.title}</h5>
                     <p class="card-text">{service.description}</p>
 
                 </div>
