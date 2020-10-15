@@ -13,6 +13,9 @@ import NotFound from './components/NotFound/NotFound'
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
+import Order from './components/Dashboard/Order/Order';
+import ServiceList from './components/Dashboard/ServiceList/ServiceList';
+import AddReview from './components/Dashboard/AddReview/AddReview';
 
 
 export const ServicesContext = createContext();
@@ -38,6 +41,16 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
+
+            <Route path="/order">
+              <Dashboard />
+            </Route>
+            <Route path="/serviceList">
+              <ServiceList />
+            </Route>
+            <Route path="/review">
+              <AddReview/>
+            </Route>
             <Route path="*">
               <NotFound />
             </Route>

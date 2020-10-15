@@ -8,8 +8,11 @@ import "firebase/auth";
 import logo from '../../images/logos/logo.png';
 import Google from '../../images/logos/google.png';
 import './Login.css';
+import "firebase/auth";
 
-firebase.initializeApp(firebaseConfig);
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -35,6 +38,7 @@ const Login = () => {
             photo: photoURL,
           };
           setLoggedInUser(signedInUser);
+          storAuthtoken();
           history.replace(from);
         })
         .catch((err) => {
@@ -43,6 +47,19 @@ const Login = () => {
         });
   
   
+    }
+    const storAuthtoken = () => {
+      firebase
+        .auth()
+        .currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function (idToken) {
+          sessionStorage.setItem("token", idToken);
+          history.replace(from);
+          
+        })
+        .catch(function (error) {
+          // Handle error
+        });
     }
     return (
         <>

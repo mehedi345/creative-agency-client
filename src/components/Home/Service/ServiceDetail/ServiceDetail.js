@@ -1,16 +1,20 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ServicesContext } from '../../../../App';
+import { ServicesContext, UserContext } from '../../../../App';
 
 const ServiceDetail = ({ service }) => {
-    const [services, setServices] = useContext(ServicesContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [services, setServices] = useContext(ServicesContext);
+    console.log(services);
     return (
         <section class="card border-white justify-content-center col-md-4 ">
-            <Link to="/dashboard" className="text-decoration-none text-secondary">
-            <div onClick={() => setServices(services)}>
+            
+            <div >
                 <div style={{ margin: 'auto' }}>
+                <Link to="/dashboard" onClick={() => setServices(service)} className="text-decoration-none text-secondary">
                     <img style={{ width: '8rem' }} class="card-img-top" src={service.img} alt="Card image cap" />
+                </Link>
                 </div>
 
                 <div class="card-body text-center">
@@ -19,7 +23,7 @@ const ServiceDetail = ({ service }) => {
 
                 </div>
             </div>
-            </Link>
+           
            
 
         </section>

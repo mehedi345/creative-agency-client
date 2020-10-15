@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ServiceDetail from './ServiceDetail/ServiceDetail';
 import './Service.css'
+import { UserContext } from '../../../App';
+import Order from '../../Dashboard/Order/Order';
 const servicesData = [
     {
         title: 'Web and Mobile Design',
@@ -19,6 +21,8 @@ const servicesData = [
     }
 ]
 const Service = () => {
+    
+ 
     return (
         <div  className="service">
            <div className="text-center my-5">
@@ -27,6 +31,7 @@ const Service = () => {
            <div className="d-flex w-100 m-auto row">
              {
                 servicesData.map(service => <ServiceDetail service={service} key={service.title}></ServiceDetail>)
+                
             }
            </div>
             
