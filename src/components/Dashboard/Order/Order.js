@@ -54,7 +54,7 @@ const Order = () => {
                     <input type="text" onBlur={handleBlur} className="form-control" placeholder="Graphics Design" name="title"  defaultValue={services.title} ref={register}/>
                 </div>
                 <div className="form-group">
-                    <textarea placeholder="Project Details" onBlur={handleBlur} className="form-control" rows="3" name="description"  ref={register}></textarea>
+                    <textarea placeholder="Project Details" onBlur={handleBlur} className="form-control" rows="3" name="description" defaultValue={services.description}  ref={register}></textarea>
                 </div>
                 <div className="d-flex">
                     <div className="col-md-6">

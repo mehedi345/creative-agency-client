@@ -1,21 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FeedbackDetail from './FeedbackDetail/FeedbackDetail';
 
-const reviewData = [
-    {
-        name: "Nash Patrik",
-        img: "https://i.imgur.com/ra9Hbvl.png"
-    },
-    {
-        name: "Miriam Barron",
-        img: "https://i.imgur.com/YO7ZGeC.png"
-    },
-    {
-        name: "Bria Malone",
-        img: "https://i.imgur.com/bfgGP9i.png"
-    },
-]
+
 const Feedback = () => {
+    const [reviews, setReviews] = useState([]);
+
+    
+
+    useEffect(() => {
+        fetch('http://localhost:5000/getReview')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return (
         <div>
             <div className="text-center font-weight-bold my-5">
@@ -23,7 +19,7 @@ const Feedback = () => {
             </div>
             <div className="d-flex row">
                 {
-                    reviewData.map(review => <FeedbackDetail key={review.name} review={review}></FeedbackDetail>)
+                    reviews.map(review => <FeedbackDetail key={review.name} review={review}></FeedbackDetail>)
                 }
             </div>
         </div>

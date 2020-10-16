@@ -4,10 +4,13 @@ import Navbar from '../Navbar/Navbar'
 import './Header.css'
 const Header = () => {
     return (
-        <div class="header-container">
+        <div className="header-container ">
+            <div class="element">
             <Navbar/>
             <HeaderMain/>
+            </div>
         </div>
+        
     );
 };
 
