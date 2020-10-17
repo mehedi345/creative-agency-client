@@ -3,6 +3,8 @@ import { Button, Col, Row } from 'react-bootstrap';
 import { UserContext } from '../../../App';
 import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 import Sidebar from '../Sidebar/Sidebar';
+import './Servicelist.css';
+
 
 const ServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
