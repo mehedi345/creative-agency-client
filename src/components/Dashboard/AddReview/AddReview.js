@@ -16,7 +16,7 @@ const AddReview = () => {
     }
     let history = useHistory();
     const sendReview = (event) => {
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://sleepy-river-40490.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(clientInfo)

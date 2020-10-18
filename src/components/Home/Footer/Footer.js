@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className="row d-flex footer-container">
-            <div className="col-md-6 ">
+            <div className="col-md-6 col-sm-12">
                 <h3 class="font-weight-bold">Let us handle your<br />project professionally</h3>
                 <p className="text-secondary">With well written codes, we build amazing apps for all platforms, mobile and web apps in general</p>
             </div>

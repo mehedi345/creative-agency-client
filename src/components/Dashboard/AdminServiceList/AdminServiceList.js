@@ -7,7 +7,7 @@ const AdminServiceList = () => {
     const [allServices, setAllServices] = useState([]);
     // Display all Services
     useEffect(() => {
-        fetch('http://localhost:5000/getAllServices')
+        fetch('https://sleepy-river-40490.herokuapp.com/getAllServices')
             .then(res => res.json())
             .then(data => setAllServices(data))
     }, [])

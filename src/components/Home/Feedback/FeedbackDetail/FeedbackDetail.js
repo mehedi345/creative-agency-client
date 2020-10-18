@@ -3,7 +3,7 @@ import React from 'react';
 const FeedbackDetail = ({review}) => {
    
     return (
-        <div class="card justify-content-center col-md-4 border-white mb-5">  
+        <div class="card justify-content-center col-md-4 border-white mb-5 col-12">  
             <div className="d-flex row" style={{margin: 'auto'}}>
                <div className="col-md-6">
                  <img style={{width: '6rem'}} class="card-img-top" src={review.img} alt="Card image cap"/>

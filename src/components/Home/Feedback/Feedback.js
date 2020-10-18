@@ -10,7 +10,7 @@ const Feedback = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/getReview')
+        fetch('https://sleepy-river-40490.herokuapp.com/getReview')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

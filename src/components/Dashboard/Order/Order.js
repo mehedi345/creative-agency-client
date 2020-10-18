@@ -18,7 +18,7 @@ const Order = () => {
         const orderData = {...data,...services};
        
 
-        fetch("http://localhost:5000/addOrder", {
+        fetch("https://sleepy-river-40490.herokuapp.com/addOrder", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(orderData),

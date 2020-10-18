@@ -13,7 +13,7 @@ const AddAdmin = () => {
     let history = useHistory();
     
     const sendReview = (event) => {
-        fetch('http://localhost:5000/addAdmin', {
+        fetch('https://sleepy-river-40490.herokuapp.com/addAdmin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(admin)

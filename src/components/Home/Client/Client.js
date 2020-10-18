@@ -8,7 +8,7 @@ import './Client.css'
 
 const Client = () => {
     return (
-        <div className="d-flex justify-content-center align-items-center client-container">
+        <div className="d-flex justify-content-center align-items-center client-container col-md-12 col-12">
             <div className="col-md-2"><img className="client-img" src= {slack} alt="slack"/></div>
             <div className="col-md-2"><img className="client-img" src= {google} alt="google"/></div>
             <div className="col-md-2"><img className="client-img" src= {uber} alt="uber" /></div>
