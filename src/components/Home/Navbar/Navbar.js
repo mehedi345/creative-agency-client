@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Navbar.css';
 import logo from '../../../images/logos/logo.png';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
+import * as firebase from "firebase/app";
 const Navbar = () => {
+  const [loggedInUser, SetLoggedInUser] = useContext(UserContext);
+  const handleSignOut = () => {
+      firebase.auth().signOut()
+          .then(res => {
+              const signedOutUser = {
+                  isSignedIn: false,
+                  name: '',
+                  email: '',
+                  photo: '',
+                  error: ''
+              };
+              SetLoggedInUser(signedOutUser);
+
+          }).catch((error) => {
+          });
+  }
     return (
         <nav className="navbar navbar-expand-lg navbar-light container">
         <a classNames="navbar-brand" href="#">
@@ -27,7 +45,11 @@ const Navbar = () => {
               <a className="nav-link mr-3" href="#">Contact US</a>
             </li>
             <li className="nav-item">
-              <Link to="/login" className="text-decoration-none"><a class="nav-link mr-3 btn-brand text-white" href="#">Login</a></Link> 
+              {
+                loggedInUser.isSignedIn ? <a class="nav-link mr-3 btn-brand text-white" onClick={handleSignOut}>Logout</a> : 
+                <Link to="/login" className="text-decoration-none"><a class="nav-link mr-3 btn-brand text-white" href="#">Login</a></Link> 
+              }
+        
             </li>
           </ul>
           

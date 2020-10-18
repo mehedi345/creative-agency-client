@@ -18,6 +18,7 @@ import ServiceList from './components/Dashboard/ServiceList/ServiceList';
 import AddReview from './components/Dashboard/AddReview/AddReview';
 import AdminServiceList from './components/Dashboard/AdminServiceList/AdminServiceList';
 import AddService from './components/Dashboard/AddService/AddService';
+import AddAdmin from './components/Dashboard/AddAdmin/AddAdmin';
 
 
 export const ServicesContext = createContext();
@@ -56,8 +57,11 @@ function App() {
             <Route path="/adminservicelist">
               <AdminServiceList/>
             </Route>
-            <Route path="addservice">
+            <Route path="/addservice">
                <AddService/>
+            </Route>
+            <Route path="/makeadmin">
+                <AddAdmin/>
             </Route>
             <Route path="*">
               <NotFound />

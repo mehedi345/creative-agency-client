@@ -1,4 +1,6 @@
+import { LocalActivityRounded } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
+import LoadingSpinner from '../../LoadingSpinner/LoadingSpinner';
 import FeedbackDetail from './FeedbackDetail/FeedbackDetail';
 
 
@@ -18,6 +20,9 @@ const Feedback = () => {
                 <h1>Clients <span style={{color:'#7AB259'}}>Feedback</span></h1>
             </div>
             <div className="d-flex row">
+                {
+                    reviews.length == 0 && <LoadingSpinner/>
+                }
                 {
                     reviews.map(review => <FeedbackDetail key={review.name} review={review}></FeedbackDetail>)
                 }

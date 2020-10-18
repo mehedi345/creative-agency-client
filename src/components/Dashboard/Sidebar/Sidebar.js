@@ -41,8 +41,7 @@ const Sidebar = () => {
     <section style={{ height: "100vh" }}>
       <img className="mt-5 mb-5" style={{ height: "40px" }} src={logo} alt="" />
       <ul className="sidebar">
-        {isUser && ( 
-        <>
+       
         <li>
           <Link to="/order">
             <AddShoppingCart /> <span>order</span>
@@ -58,7 +57,7 @@ const Sidebar = () => {
           <Link to="/review"><SmsIcon /> <span>Review</span></Link>
 
         </li>
-        </>)}
+       
         {isAdmin && (
           <div>
             <li>
@@ -72,7 +71,9 @@ const Sidebar = () => {
                </Link>
             </li>
             <li>
-              <PersonAddIcon /><span>Make Admin</span>
+              <Link to="/makeadmin">
+               <PersonAddIcon /><span>Make Admin</span>
+              </Link>
             </li>
           </div>
         )}
